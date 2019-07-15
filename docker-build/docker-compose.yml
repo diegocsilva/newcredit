@@ -1,0 +1,8 @@
+version: '3.4'
+services:
+    app:
+      image: diegocsilva/build_angular_and_java:latest
+      volumes:
+        - ../:/opt/build
+        - $HOME/.m2:/root/
+      command: sh /opt/build/docker-build/build.sh
