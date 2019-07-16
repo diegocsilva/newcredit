@@ -39,18 +39,18 @@ services:
         context: ./back-end/newcredit-engine/run/
         dockerfile: Dockerfile
       restart: unless-stopped
-    # newcredit-ui:
-    #   image: newcredit-ui
-    #   depends_on:
-    #     - newcredit-service
-    #   ports:
-    #     - 4200:80
-    #   networks:
-    #     - app-net
-    #   build:
-    #     context: ./front-end/newcredit-ui/run/
-    #     dockerfile: Dockerfile
-    #   restart: unless-stopped
+    newcredit-ui:
+      image: newcredit-ui
+      depends_on:
+        - newcredit-service
+      ports:
+        - 4200:80
+      networks:
+        - app-net
+      build:
+        context: ./front-end/
+        dockerfile: Dockerfile
+      restart: unless-stopped
 volumes:
   postgres-data:        
 

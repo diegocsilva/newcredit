@@ -3,6 +3,6 @@ cd back-end/newcredit
 mvn clean install -DskipTests
 cd ../newcredit-engine
 mvn clean install -DskipTests
-# cd ../../front-end/newcredit-ui
-# npm install
-# ng build --prod"
+cd ../front-end
+npm install
+ng build --prod"
