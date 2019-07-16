@@ -19,4 +19,4 @@ spring:
 
 application:
   newCreditEngine:
-    url: http://0.0.0.0:8081/api/newcredit-engine
+    url: http://0.0.0.0:8081/api/proposal-reviews

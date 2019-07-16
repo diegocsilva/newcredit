@@ -1,0 +1,18 @@
+<notifier-container></notifier-container>
+<form [formGroup]="myForm">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Nova Proposta de Crédito</div>
+      </div>
+      <div class="card-body">
+        <div class="card-action">
+          <button type="submit" class="btn btn-success" (click)="send()">
+            Enviar <i class="fa fa-spinner fa-spin fa-fw"></i>
+          </button>
+          <button class="btn btn-danger" (click)="cancel()">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -3,12 +3,14 @@ package br.com.newcredit.dto;
 import br.com.newcredit.domain.MaritalStatus;
 import br.com.newcredit.domain.Sex;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class ProposalDTO {
 
     private String name;

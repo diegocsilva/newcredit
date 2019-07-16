@@ -62,7 +62,7 @@ public class ProposalService {
                 .customer(customer)
                 .descriptionResult(responseProposal.getDescriptionResult())
                 .margin(responseProposal.getMargin())
-                .status(Status.valueOf(responseProposal.getStatus()))
+                .status(responseProposal.getStatus())
                 .build();
     }
 
@@ -70,7 +70,7 @@ public class ProposalService {
         return ResponseProposalDTO.builder()
                 .cpf(creditProposal.getCustomer().getCpf())
                 .descriptionResult(creditProposal.getDescriptionResult())
-                .status(creditProposal.getStatus().name())
+                .status(creditProposal.getStatus())
                 .margin(creditProposal.getMargin())
                 .build();
     }
