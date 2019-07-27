@@ -3,6 +3,7 @@ package br.com.newcredit.controller;
 import br.com.newcredit.dto.ProposalDTO;
 import br.com.newcredit.dto.ResponseProposalDTO;
 import br.com.newcredit.service.ProposalService;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,8 +17,9 @@ public class ProposalController {
         this.proposalService = proposalService;
     }
 
-    @PostMapping
-    public ResponseEntity<?> send(ProposalDTO proposal){
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> send(@RequestBody ProposalDTO proposal){
         ResponseProposalDTO responseProposal = proposalService.sendProposal(proposal);
         return ResponseEntity.ok(responseProposal);
     }

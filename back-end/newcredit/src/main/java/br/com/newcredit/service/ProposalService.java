@@ -1,6 +1,5 @@
 package br.com.newcredit.service;
 
-import br.com.newcredit.domain.Status;
 import br.com.newcredit.dto.ProposalDTO;
 import br.com.newcredit.dto.ResponseProposalDTO;
 import br.com.newcredit.entity.CreditProposal;
@@ -35,7 +34,10 @@ public class ProposalService {
     }
 
     private void registerCustomer(Customer customer) {
-        customerService.register(customer);
+        Customer c = customerService.getByCpf(customer.getCpf());
+        if (c == null || c.getCpf() == null){
+            customerService.register(customer);
+        }
     }
 
     private void registerCreditProposal(CreditProposal creditProposal) {
@@ -67,11 +69,14 @@ public class ProposalService {
     }
 
     private ResponseProposalDTO converCreditProposalToResponseProposalDTO(CreditProposal creditProposal) {
-        return ResponseProposalDTO.builder()
-                .cpf(creditProposal.getCustomer().getCpf())
-                .descriptionResult(creditProposal.getDescriptionResult())
-                .status(creditProposal.getStatus())
-                .margin(creditProposal.getMargin())
-                .build();
+        if (creditProposal != null && creditProposal.getCustomer() != null){
+            return ResponseProposalDTO.builder()
+                    .cpf(creditProposal.getCustomer().getCpf())
+                    .descriptionResult(creditProposal.getDescriptionResult())
+                    .status(creditProposal.getStatus())
+                    .margin(creditProposal.getMargin())
+                    .build();
+        }
+        return null;
     }
 }

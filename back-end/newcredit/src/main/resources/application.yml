@@ -20,3 +20,16 @@ spring:
 application:
   newCreditEngine:
     url: http://0.0.0.0:8081/api/proposal-reviews
+
+---
+
+spring:
+  profiles:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://db:5432/newcredit?createDatabaseIfNotExist=trues
+application:
+  newCreditEngine:
+    url: http://newcredit-engine:8081/api/proposal-reviews

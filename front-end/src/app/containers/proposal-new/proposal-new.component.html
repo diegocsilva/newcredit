@@ -1,16 +1,79 @@
 <notifier-container></notifier-container>
-<form [formGroup]="myForm">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header">
-        <div class="card-title">Nova Proposta de Crédito</div>
-      </div>
-      <div class="card-body">
+<form [formGroup]="myForm" class="container-fluid" style="justify-content: center">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Proposta de crédito</h4>
+          <p class="card-category">Informe os dados para envio da proposta.</p>
+        </div>
+        <div class="card-body" class="col-md-12 row">
+          <div class="form-group col-md-9">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="name" placeholder="Digite seu nome" 
+              formControlName="name" required #name>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="cpf">CPF</label>
+            <input type="text" mask="000.000.000-00" class="form-control" id="cpf" placeholder="Digite seu CPF"
+              formControlName="cpf" required #cpf>
+          </div>
+
+          <div class="col-md-1"></div>
+
+          <div class="form-group col-md-4">
+            <label for="exampleFormControlSelect1">Estado Cívil</label>
+            <select class="form-control" formControlName="maritalStatus" formControlName="maritalStatus" required
+              #maritalStatus>
+              <option *ngFor="let marital of maritals" [ngValue]="marital.value">
+                {{ marital.name }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-1"></div>
+
+          <div class="form-check col-md-4">
+            <label>Sexo</label><br>
+            <label class="form-radio-label">
+              <input formControlName="sex" required #sex class="form-radio-input" type="radio" name="sex" 
+                value="MALE" checked="">
+              <span class="form-radio-sign">Masculino</span>
+            </label>
+            <label class="form-radio-label ml-3">
+              <input formControlName="sex" required #sex class="form-radio-input" type="radio" name="sex"
+                value="FEMALE">
+              <span class="form-radio-sign">Feminino</span>
+            </label>
+          </div>
+
+          <div class="col-md-1"></div>
+
+          <div class="form-group col-md-4">
+            <label for="age">Idade</label>
+            <input type="number" class="form-control" id="age" formControlName="age" required #age>
+          </div>
+
+          <div class="col-md-2"></div>
+
+          <div class="form-group col-md-4">
+            <label for="income">Renda</label>
+            <input type="text" mask="dot_separator.0" class="form-control" id="income" placeholder="Informe sua renda"
+              formControlName="income" required #income>
+          </div>
+
+          <div class="col-md-1"></div>
+
+          <div class="form-group col-md-4">
+            <label for="dependents">Dependentes</label>
+            <input type="number" class="form-control" id="dependents" formControlName="dependents" required #dependents>
+          </div>
+
+        </div>
         <div class="card-action">
-          <button type="submit" class="btn btn-success" (click)="send()">
-            Enviar <i class="fa fa-spinner fa-spin fa-fw"></i>
-          </button>
           <button class="btn btn-danger" (click)="cancel()">Cancelar</button>
+          <button class="btn btn-success" (click)="saveProposal()">Enviar</button>
         </div>
       </div>
     </div>

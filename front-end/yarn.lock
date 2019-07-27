@@ -303,6 +303,13 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@ng-select/ng-select@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@ng-select/ng-select/-/ng-select-3.0.3.tgz#c57ec23e953000d84c1fd3a449bdb0e38811597d"
+  integrity sha512-x+qAi/RHJrgOO8V9a88LVwFBdsgyr/Hm4nLjW/mxUAdMJRKRsacEt4DCJid5ul4gDt/Aqym/rvHpQaP+JWtRsQ==
+  dependencies:
+    tslib "^1.9.0"
+
 "@ngtools/webpack@6.0.8":
   version "6.0.8"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-6.0.8.tgz#a05bce526aee9da62bb230a95fba83fee99d0bca"
@@ -363,6 +370,11 @@
   integrity sha512-2ZOKrxb8bKRmP/po5ObYnRDgFE4i+lQiEB27bAMmtMWLgJSqlIDqlLx6S0IRorpOmOPRQ6O80NujTmQAtBkeNw==
   dependencies:
     "@types/jasmine" "*"
+
+"@types/lodash@^4.14.118":
+  version "4.14.136"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.136.tgz#413e85089046b865d960c9ff1d400e04c31ab60f"
+  integrity sha512-0GJhzBdvsW2RUccNHOBkabI8HZVdOXmXbXhuKlDEd5Vv12P7oAVGfomGp3Ne21o5D/qu1WmthlNKFaoZJJeErA==
 
 "@types/minimatch@*":
   version "3.0.3"
@@ -4632,6 +4644,20 @@ neo-async@^2.5.0, neo-async@^2.6.0:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
+
+ng-select@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ng-select/-/ng-select-1.0.2.tgz#a1b196f8681907462598a09c85a17195ad4bf994"
+  integrity sha512-QMh5NqnYrsK18J8vmRBjpcv4o9euGd5Grs+4sutNNWWDX65rJlLh+S6oUq3uvo35S2v/ZMcMMR/e5f0gMlwxlA==
+  dependencies:
+    tslib "^1.9.0"
+
+ngx-mask@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/ngx-mask/-/ngx-mask-8.0.1.tgz#9d6e65459cad68efda84769b3b49696c1d700b64"
+  integrity sha512-TdzJhWT00WZqDDiqZfPvSdo5RrIPQEC3e6RbApECUfp4cT/b1pZU7toLqhFAVi2OJOuVrGz+pmCoCHZ4MjYXWw==
+  dependencies:
+    tslib "^1.9.0"
 
 ngx-toastr@^10.0.2:
   version "10.0.4"

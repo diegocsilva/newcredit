@@ -8,7 +8,7 @@ import { customNotifierOptions } from './app.notify';
 import { NotifierModule } from 'angular-notifier';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-
+import { NgxMaskModule } from 'ngx-mask'
 import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
@@ -30,10 +30,8 @@ import { ProposalNewComponent } from './containers/proposal-new/proposal-new.com
     ContentComponent,
     FooterComponent,
     HomeComponent,
-    ProposalNewComponent,
     ProposalListComponent,
-    ProposalListComponent,
-    ProposalNewComponent,
+    ProposalNewComponent
   ],
   imports: [
     FormsModule,
@@ -43,6 +41,7 @@ import { ProposalNewComponent } from './containers/proposal-new/proposal-new.com
     NotifierModule.withConfig(customNotifierOptions),
     routes,
     ToastrModule.forRoot(),
+    NgxMaskModule.forRoot(),
     MatToolbarModule,
     MatNativeDateModule,
     MatTableModule  ],

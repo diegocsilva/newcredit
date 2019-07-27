@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { Observable } from 'rxjs';
 import { Proposal } from '../../model/proposal.model';
+import { ResponseProposta } from 'src/app/model/responseproposta.model';
 
 @Injectable()
 export class ProposalService {
@@ -13,7 +14,7 @@ export class ProposalService {
     return this.http.post(`${environment.proposal.send}`, proposal);
   }
 
-  findAllByCpf(cpf: number): Observable<Proposal[]> {
-    return this.http.get<Proposal[]>(`${environment.proposal.findByCpf}/${cpf}`);
+  findResponsePropostaByCpf(cpf: number): any {
+    return this.http.get(`${environment.proposal.findByCpf}/${cpf}`).toPromise();
   }
 }

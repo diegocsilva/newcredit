@@ -19,24 +19,23 @@ services:
       image: newcredit-service
       depends_on:
         - db
+        - newcredit-engine
       ports:
         - 8080:8080
       networks:
         - app-net
       build:
-        context: ./back-end/newcredit/run/
+        context: ./back-end/newcredit/
         dockerfile: Dockerfile
       restart: unless-stopped
     newcredit-engine:
       image: newcredit-engine
-      depends_on:
-        - newcredit-service
       ports:
         - 8081:8081
       networks:
         - app-net
       build:
-        context: ./back-end/newcredit-engine/run/
+        context: ./back-end/newcredit-engine/
         dockerfile: Dockerfile
       restart: unless-stopped
     newcredit-ui:
