@@ -1,3 +1,9 @@
 static/* linguist-vendored
+front-end/src/assets/* linguist-vendored
+*.scss linguist-vendored
 *.js linguist-vendored=false
 *.css linguist-vendored=false
+*.java linguist-vendored=false
+*.properties linguist-language=Java
+*.sql linguist-language=Java
+*.xml linguist-language=Java
